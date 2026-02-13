@@ -1,0 +1,228 @@
+/* ===== NOTICE ===== */
+.horaires__notice {
+    padding: 40px 0 0;
+}
+
+.horaires__notice-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(230, 126, 34, 0.08);
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--color-construction);
+}
+
+.horaires__notice-icon {
+    font-size: 1.5rem;
+    color: var(--color-construction);
+    flex-shrink: 0;
+}
+
+.horaires__notice-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===== SCHEDULE TABLE ===== */
+.horaires__schedule {
+    background: var(--color-white);
+}
+
+.horaires__table {
+    max-width: 700px;
+    margin: 40px auto 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.horaires__row {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background var(--transition-fast);
+}
+
+.horaires__row:last-child {
+    border-bottom: none;
+}
+
+.horaires__row:hover {
+    background: rgba(107, 39, 55, 0.02);
+}
+
+.horaires__row--highlight {
+    background: linear-gradient(135deg, rgba(107, 39, 55, 0.04), rgba(212, 168, 83, 0.04));
+    border-left: 4px solid var(--color-gold);
+}
+
+.horaires__day {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.horaires__day-icon {
+    font-size: 0.7rem;
+    color: var(--color-gold);
+}
+
+.horaires__times {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.horaires__time {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+/* ===== SACRAMENTS ===== */
+.horaires__sacraments {
+    background: var(--color-cream);
+}
+
+.horaires__sacraments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.horaires__sacrament {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    border-left: 4px solid var(--color-gold);
+}
+
+.horaires__sacrament-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.horaires__sacrament-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.horaires__sacrament h3 {
+    font-size: 1.2rem;
+}
+
+.horaires__sacrament-desc {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.horaires__sacrament-reqs {
+    background: var(--color-cream);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+}
+
+.horaires__sacrament-reqs h4 {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.horaires__sacrament-reqs ul {
+    list-style: none;
+}
+
+.horaires__sacrament-reqs li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: var(--color-text-light);
+    margin-bottom: 6px;
+}
+
+.horaires__sacrament-reqs li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-size: 0.7rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .horaires__table {
+        max-width: 100%;
+    }
+
+    .horaires__sacrament-header {
+        gap: 12px;
+    }
+
+    .horaires__sacrament-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .horaires__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 14px 16px;
+    }
+
+    .horaires__day {
+        min-width: auto;
+        font-size: 0.9rem;
+    }
+
+    .horaires__time {
+        font-size: 0.85rem;
+    }
+
+    .horaires__notice-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .horaires__sacrament {
+        padding-left: 12px;
+    }
+
+    .horaires__sacrament h3 {
+        font-size: 1.05rem;
+    }
+
+    .horaires__sacrament-desc {
+        font-size: 0.88rem;
+    }
+
+    .horaires__sacrament-reqs {
+        padding: 12px 16px;
+    }
+
+    .horaires__sacrament-reqs li {
+        font-size: 0.82rem;
+    }
+}

@@ -1,0 +1,118 @@
+/* ===== EVENTS ===== */
+.evenements__grid-section {
+    background: var(--color-cream);
+}
+
+.evenements__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.evenements__card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+}
+
+.evenements__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+}
+
+.evenements__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.evenements__category {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(107, 39, 55, 0.08);
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.evenements__card-icon {
+    font-size: 1.8rem;
+    color: var(--color-gold);
+    opacity: 0.6;
+}
+
+.evenements__card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.evenements__desc {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.evenements__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.evenements__date,
+.evenements__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.evenements__date svg,
+.evenements__location svg {
+    color: var(--color-gold);
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .evenements__grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .evenements__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .evenements__card {
+        padding: 22px 20px;
+    }
+
+    .evenements__card h3 {
+        font-size: 1.05rem;
+    }
+
+    .evenements__desc {
+        font-size: 0.85rem;
+    }
+
+    .evenements__card-top {
+        margin-bottom: 12px;
+    }
+}
