@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaChurch, FaHardHat, FaUsers, FaHeart, FaBible, FaPrayingHands, FaHandsHelping, FaTimes, FaCross, FaChevronLeft, FaChevronRight, FaSearchPlus } from 'react-icons/fa';
+import { FaChurch, FaHardHat, FaUsers, FaHeart, FaBible, FaPrayingHands, FaHandsHelping, FaTimes, FaCross, FaChevronLeft, FaChevronRight, FaSearchPlus, FaClock, FaMusic } from 'react-icons/fa';
 import './About.css';
 
 const fadeUp = {

@@ -12,13 +12,19 @@ const stagger = {
 };
 
 const massSchedule = [
-    { day: 'Dimanche', times: ['08h00 — Première Messe', '10h00 — Grand-Messe'], highlight: true },
-    { day: 'Lundi', times: ['Pas de messe'] },
-    { day: 'Mardi', times: ['Pas de messe'] },
-    { day: 'Mercredi', times: ['18h00 — Messe en semaine'] },
-    { day: 'Jeudi', times: ['Pas de messe'] },
-    { day: 'Vendredi', times: ['18h00 — Chemin de croix & Messe'] },
-    { day: 'Samedi', times: ['16h00 — Confessions', '17h00 — Messe anticipée'] },
+    { day: 'Lundi au Vendredi', times: ['05h45 — Laudes', '06h00 — Messe quotidienne'] },
+    { day: 'Samedi', times: ['05h45 — Laudes', '06h00 — Messe quotidienne', '18h00 — Messe prédominicale à l\'Oratoire'] },
+    {
+        day: 'Dimanche',
+        times: [
+            '06h00 — Messe en Ewondo (Chorale Sacré Cœur de Jésus)',
+            '08h00 — Communauté Anglophone (Chorale Sainte Cécile)',
+            '09h30 — Communauté Bamileké et Bassa (Chorale à compléter)',
+            '11h00 — Touts Petits Amis de St Augustin (Messe des jeunes)',
+            '17h00 — Dernière Messe (Chorale Ste Monique)'
+        ],
+        highlight: true
+    },
 ];
 
 const sacraments = [
