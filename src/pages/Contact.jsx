@@ -24,6 +24,23 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const phoneNumber = '237699598514';
+        const message = [
+            `🙏 *Nouveau message depuis le site de la Paroisse Saint Augustin*`,
+            ``,
+            `👤 *Nom :* ${formData.name}`,
+            formData.email ? `📧 *Email :* ${formData.email}` : '',
+            formData.phone ? `📞 *Téléphone :* ${formData.phone}` : '',
+            `📌 *Sujet :* ${formData.subject}`,
+            ``,
+            `💬 *Message :*`,
+            formData.message
+        ].filter(Boolean).join('\n');
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+
         setSubmitted(true);
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
         setTimeout(() => setSubmitted(false), 5000);
@@ -153,7 +170,7 @@ export default function Contact() {
                                     <div className="contact__info-icon"><FaPhone /></div>
                                     <div>
                                         <span className="contact__info-label">Téléphone</span>
-                                        <span className="contact__info-value">+237 6XX XXX XXX</span>
+                                        <span className="contact__info-value">+237 699 598 514</span>
                                     </div>
                                 </div>
                                 <div className="contact__info-item">
@@ -177,7 +194,7 @@ export default function Contact() {
                                 <h3>Suivez-nous</h3>
                                 <div className="contact__social-links">
                                     <a href="#" className="contact__social-link" aria-label="Facebook"><FaFacebookF /></a>
-                                    <a href="#" className="contact__social-link" aria-label="WhatsApp"><FaWhatsapp /></a>
+                                    <a href="https://wa.me/237699598514" target="_blank" rel="noopener noreferrer" className="contact__social-link" aria-label="WhatsApp"><FaWhatsapp /></a>
                                 </div>
                             </div>
 

@@ -32,6 +32,226 @@
     line-height: 1.8;
 }
 
+/* ===== GALLERY CONSTRUCTION ===== */
+.about__gallery {
+    background: var(--color-white);
+    text-align: center;
+}
+
+.about__gallery-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(230, 126, 34, 0.05));
+    color: var(--color-construction);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(230, 126, 34, 0.15);
+}
+
+.about__gallery-label svg {
+    font-size: 0.85rem;
+}
+
+.about__gallery-bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.about__gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    height: 250px;
+}
+
+.about__gallery-item--1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+    min-height: 516px;
+}
+
+.about__gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about__gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.about__gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.about__gallery-item:hover .about__gallery-overlay {
+    opacity: 1;
+}
+
+.about__gallery-zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about__gallery-overlay h4 {
+    color: white;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
+}
+
+.about__gallery-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* ===== LIGHTBOX ===== */
+.about__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.about__lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: background 0.2s;
+}
+
+.about__lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.about__lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: all 0.2s;
+}
+
+.about__lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.about__lightbox-prev {
+    left: 24px;
+}
+
+.about__lightbox-next {
+    right: 24px;
+}
+
+.about__lightbox-content {
+    max-width: 800px;
+    max-height: 80vh;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    background: var(--color-white);
+}
+
+.about__lightbox-content img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    display: block;
+    background: #111;
+}
+
+.about__lightbox-caption {
+    padding: 20px 28px;
+    text-align: center;
+}
+
+.about__lightbox-caption h4 {
+    font-size: 1.15rem;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.about__lightbox-caption p {
+    color: var(--color-text-light);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.about__lightbox-counter {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-gold-dark);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(196, 164, 105, 0.1);
+    padding: 4px 14px;
+    border-radius: 50px;
+}
+
 /* ===== VALUES ===== */
 .about__values {
     background: var(--color-white);
@@ -141,61 +361,359 @@
     line-height: 1.7;
 }
 
+/* ===== CURÉ & TEAM UNIFIED ===== */
+
+.about__team-header {
+    text-align: center;
+}
+
+.about__team-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(196, 164, 105, 0.12), rgba(107, 39, 55, 0.08));
+    color: var(--color-gold-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(196, 164, 105, 0.15);
+}
+
+.about__team-label svg {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+}
+
+.about__cure-card--featured {
+    margin-bottom: 32px;
+    border-left: 4px solid var(--color-gold);
+    position: relative;
+}
+
+.about__cure-card {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    padding: 48px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 32px rgba(107, 39, 55, 0.08);
+    border: 1px solid rgba(107, 39, 55, 0.06);
+    overflow: hidden;
+}
+
+.about__cure-photo-wrapper {
+    flex-shrink: 0;
+    width: 280px;
+    height: 340px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about__cure-photo-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(107, 39, 55, 0.2);
+}
+
+.about__cure-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.about__cure-photo-wrapper:hover .about__cure-photo {
+    transform: scale(1.05);
+}
+
+.about__cure-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(107, 39, 55, 0.7), transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about__cure-photo-wrapper:hover .about__cure-photo-overlay {
+    opacity: 1;
+}
+
+.about__cure-photo-overlay span {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about__cure-info {
+    flex: 1;
+}
+
+.about__cure-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(107, 39, 55, 0.08), rgba(196, 164, 105, 0.08));
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.about__cure-badge svg {
+    font-size: 0.75rem;
+    color: var(--color-gold);
+}
+
+.about__cure-name {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
+}
+
+.about__cure-title {
+    color: var(--color-gold-dark);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about__cure-quote {
+    position: relative;
+    padding: 20px 24px;
+    margin: 0 0 20px;
+    background: linear-gradient(135deg, rgba(196, 164, 105, 0.06), rgba(107, 39, 55, 0.04));
+    border-left: 3px solid var(--color-gold);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.about__cure-bio {
+    color: var(--color-text-light);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+/* ===== CURÉ MODAL ===== */
+.about__cure-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.about__cure-modal-content {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.about__cure-modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about__cure-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.about__cure-modal-close:hover {
+    background: rgba(107, 39, 55, 0.9);
+}
+
+.about__cure-modal-caption {
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.about__cure-modal-caption h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.about__cure-modal-caption p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
 /* ===== TEAM ===== */
 .about__team {
     background: var(--color-white);
 }
 
-.about__team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+.about__team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
-.about__team-card {
-    text-align: center;
-    padding: 40px 24px;
+.about__team-member-card {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    padding: 48px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 32px rgba(107, 39, 55, 0.08);
+    border: 1px solid rgba(107, 39, 55, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about__team-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.about__team-member-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(107, 39, 55, 0.12);
+}
+
+.about__team-member-card--reverse {
+    flex-direction: row-reverse;
+}
+
+.about__team-photo-wrapper {
+    flex-shrink: 0;
+    width: 220px;
+    height: 280px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.about__team-member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__team-placeholder {
+    width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
-    font-size: 1.8rem;
+    gap: 12px;
+    border-radius: var(--radius-md);
+}
+
+.about__team-placeholder-initial {
+    font-size: 4rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: rgba(255, 255, 255, 0.9);
     font-family: var(--font-heading);
+    line-height: 1;
 }
 
-.about__team-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 4px;
-}
-
-.about__team-role {
-    display: inline-block;
-    color: var(--color-gold-dark);
-    font-size: 0.85rem;
+.about__team-placeholder-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
     font-weight: 600;
-    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 50px;
 }
 
-.about__team-card p {
-    color: var(--color-text-light);
-    font-size: 0.88rem;
+.about__team-member-info {
+    flex: 1;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
-    .about__values-grid,
-    .about__team-grid {
+    .about__values-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .about__cure-card,
+    .about__team-member-card,
+    .about__team-member-card--reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+        padding: 36px;
+    }
+
+    .about__cure-photo-wrapper {
+        width: 240px;
+        height: 300px;
+    }
+
+    .about__team-photo-wrapper {
+        width: 200px;
+        height: 260px;
+    }
+
+    .about__cure-quote {
+        text-align: left;
+    }
+
+    .about__cure-badge {
+        margin: 0 auto 16px;
+    }
+
+    .about__gallery-bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__gallery-item--1 {
+        grid-column: span 2;
+        min-height: 350px;
+    }
+
+    .about__gallery-item {
+        height: 220px;
     }
 }
 
@@ -211,13 +729,11 @@
         font-size: 2rem;
     }
 
-    .about__values-grid,
-    .about__team-grid {
+    .about__values-grid {
         grid-template-columns: 1fr;
     }
 
-    .about__value-card,
-    .about__team-card {
+    .about__value-card {
         padding: 28px 20px;
     }
 
@@ -241,9 +757,76 @@
         font-size: 0.85rem;
     }
 
-    .about__team-avatar {
-        width: 70px;
-        height: 70px;
-        font-size: 1.5rem;
+    .about__cure-card,
+    .about__team-member-card {
+        padding: 24px 20px;
+    }
+
+    .about__cure-photo-wrapper,
+    .about__team-photo-wrapper {
+        width: 180px;
+        height: 240px;
+    }
+
+    .about__cure-name {
+        font-size: 1.4rem;
+    }
+
+    .about__cure-quote {
+        padding: 16px 20px;
+        font-size: 0.9rem;
+    }
+
+    .about__cure-bio {
+        font-size: 0.85rem;
+    }
+
+    .about__cure-modal-content {
+        max-width: 90vw;
+    }
+
+    .about__team-placeholder-initial {
+        font-size: 3rem;
+    }
+
+    .about__gallery-bento {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about__gallery-item--1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 250px;
+    }
+
+    .about__gallery-item {
+        height: 200px;
+    }
+
+    .about__lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .about__lightbox-prev {
+        left: 8px;
+    }
+
+    .about__lightbox-next {
+        right: 8px;
+    }
+
+    .about__lightbox-content {
+        max-width: 95vw;
+    }
+
+    .about__lightbox-caption {
+        padding: 14px 16px;
+    }
+
+    .about__lightbox-caption h4 {
+        font-size: 1rem;
     }
 }
