@@ -12,19 +12,20 @@ const stagger = {
 };
 
 const massSchedule = [
-    { day: 'Lundi au Vendredi', times: ['05h45 — Laudes', '06h00 — Messe quotidienne'] },
-    { day: 'Samedi', times: ['05h45 — Laudes', '06h00 — Messe quotidienne', '18h00 — Messe prédominicale à l\'Oratoire'] },
     {
         day: 'Dimanche',
         times: [
-            '06h00 — Messe en Ewondo (Chorale Sacré Cœur de Jésus)',
-            '08h00 — Communauté Anglophone (Chorale Sainte Cécile)',
-            '09h30 — Communauté Bamileké et Bassa (Chorale à compléter)',
-            '11h00 — Touts Petits Amis de St Augustin (Messe des jeunes)',
-            '17h00 — Dernière Messe (Chorale Ste Monique)'
+            '08h15 — Messe animée par Andrew Choir',
+            '09h30 — Chorale Ste Monique et Ste Vincent de Paul',
+            '11h30 — Messe des Jeunes, chorale les Petits Amis de St Augustin',
+            '17h00 — Chorale Ste Cécile'
         ],
         highlight: true
     },
+    { day: 'Lundi', times: ['17h30 — Messe à l\'Oratoire'] },
+    { day: 'Samedi', times: ['Messe Matin / Soir'] },
+    { day: 'Jeudi', times: ['07h00 à 17h30 — Adoration à l\'Oratoire'] },
+    { day: 'Tous les jours', times: ['Confessions tous les matins'] },
 ];
 
 const sacraments = [

@@ -8,6 +8,7 @@ import Horaires from './pages/Horaires';
 import Evenements from './pages/Evenements';
 import Dons from './pages/Dons';
 import Contact from './pages/Contact';
+import Pelerinage from './pages/Pelerinage';
 import { FaHardHat } from 'react-icons/fa';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/dons" element={<Dons />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pelerinage" element={<Pelerinage />} />
         </Routes>
       </main>
 

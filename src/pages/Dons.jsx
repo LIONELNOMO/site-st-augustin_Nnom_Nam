@@ -18,19 +18,8 @@ const donationMethods = [
         title: 'Mobile Money',
         desc: 'Envoyez votre don par Orange Money ou MTN Mobile Money',
         details: [
-            'Orange Money : 6XX XXX XXX',
-            'MTN MoMo : 6XX XXX XXX',
+            'Orange Money : +237 699 99 51 37',
             'Nom : Paroisse Saint Augustin'
-        ]
-    },
-    {
-        icon: <FaUniversity />,
-        title: 'Virement Bancaire',
-        desc: 'Effectuez un virement sur le compte paroissial',
-        details: [
-            'Banque : [Nom de la banque]',
-            'Compte : XXXX-XXXX-XXXX',
-            'Intitulé : Paroisse St Augustin Nnom Nam'
         ]
     },
     {
@@ -46,7 +35,7 @@ const donationMethods = [
 ];
 
 const donationPurposes = [
-    { icon: <FaChurch />, title: 'Construction de l\'église', desc: 'Contribuez à l\'édification de notre lieu de culte', progress: 35 },
+    { icon: <FaChurch />, title: 'Construction de l\'église', desc: 'Contribuez à l\'édification de notre lieu de culte', progress: 50 },
     { icon: <FaPrayingHands />, title: 'Vie pastorale', desc: 'Soutenez les activités liturgiques et pastorales', progress: 60 },
     { icon: <FaHandHoldingHeart />, title: 'Œuvres de charité', desc: 'Aidez les plus démunis de notre communauté', progress: 45 },
 ];
@@ -113,8 +102,8 @@ export default function Dons() {
                                 </p>
                                 <div className="dons__progress-wrapper">
                                     <div className="dons__progress-bar">
-                                        <div className="dons__progress-fill" style={{ width: '35%' }}>
-                                            <span>35%</span>
+                                        <div className="dons__progress-fill" style={{ width: '50%' }}>
+                                            <span>50%</span>
                                         </div>
                                     </div>
                                     <span className="dons__progress-label">Avancement global du projet</span>
@@ -284,7 +273,7 @@ export default function Dons() {
                         <FaPhone className="dons__contact-icon" />
                         <div>
                             <h3>Besoin d'informations ?</h3>
-                            <p>Pour toute question sur les dons, contactez le secrétariat paroissial au <strong>+237 6XX XXX XXX</strong></p>
+                            <p>Pour toute question sur les dons, contactez le secrétariat paroissial au <strong>+237 699 99 51 37</strong></p>
                         </div>
                     </div>
                 </div>

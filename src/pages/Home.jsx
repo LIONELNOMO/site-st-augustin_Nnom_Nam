@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaChurch, FaCross, FaCalendarAlt, FaHandHoldingHeart, FaHardHat, FaPrayingHands, FaArrowRight } from 'react-icons/fa';
+import { FaChurch, FaCross, FaCalendarAlt, FaHandHoldingHeart, FaHardHat, FaPrayingHands, FaArrowRight, FaMountain } from 'react-icons/fa';
 import './Home.css';
 
 const fadeUp = {
@@ -13,28 +13,28 @@ const stagger = {
 };
 
 const scheduleData = [
-    { day: 'Dimanche', time: '08h00 - 10h00', label: 'Messe dominicale' },
-    { day: 'Mercredi', time: '18h00 - 19h00', label: 'Messe en semaine' },
-    { day: 'Vendredi', time: '18h00 - 19h00', label: 'Chemin de croix & Messe' },
+    { day: 'Dimanche', time: '8h15 · 9h30 · 11h30 · 17h00', label: 'Messes dominicales' },
+    { day: 'Samedi', time: 'Matin / Soir', label: 'Messe pré-dominicale' },
+    { day: 'Lundi', time: '17h30', label: 'Messe à l\'Oratoire' },
 ];
 
 const upcomingEvents = [
     {
-        date: '22 Fév',
-        title: 'Journée de prière communautaire',
-        desc: 'Rassemblement pour prier pour l\'avancée des travaux de construction de notre église.',
+        date: '29 Mars',
+        title: 'Dimanche des Rameaux',
+        desc: 'Célébration solennelle des Rameaux et de la Passion du Seigneur, début de la Semaine Sainte.',
+        icon: <FaChurch />
+    },
+    {
+        date: '02 Avr',
+        title: 'Triduum Pascal — Sainte Cène',
+        desc: 'Début du Triduum Pascal avec la messe de la Sainte Cène à 18h00.',
         icon: <FaPrayingHands />
     },
     {
-        date: '08 Mars',
-        title: 'Collecte de fonds',
-        desc: 'Grande collecte pour financer les travaux de construction. Chaque contribution compte !',
-        icon: <FaHandHoldingHeart />
-    },
-    {
-        date: '15 Mars',
-        title: 'Bénédiction du chantier',
-        desc: 'Cérémonie spéciale de bénédiction pour la prochaine étape de construction.',
+        date: '05 Avr',
+        title: 'Dimanche de la Résurrection',
+        desc: 'Célébration joyeuse de Pâques, la Résurrection du Christ !',
         icon: <FaChurch />
     },
 ];
@@ -70,7 +70,7 @@ export default function Home() {
                         transition={{ duration: 0.9, delay: 0.2 }}
                     >
                         Paroisse Saint Augustin
-                        <span className="hero__subtitle">de Nnom Nam</span>
+                        <span className="hero__subtitle">de NNOM-NNAM</span>
                     </motion.h1>
 
                     <motion.p
@@ -80,7 +80,7 @@ export default function Home() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
                         Ensemble, bâtissons notre maison de Dieu. Une communauté de foi,
-                        d'espérance et de charité au cœur de Nnom Nam.
+                        d'espérance et de charité au cœur de NNOM-NNAM.
                     </motion.p>
 
                     <motion.div
@@ -127,8 +127,8 @@ export default function Home() {
 
                         <motion.div variants={fadeUp} className="construction__progress-wrapper">
                             <div className="construction__progress-bar">
-                                <div className="construction__progress-fill" style={{ width: '35%' }}>
-                                    <span className="construction__progress-text">35%</span>
+                                <div className="construction__progress-fill" style={{ width: '50%' }}>
+                                    <span className="construction__progress-text">50%</span>
                                 </div>
                             </div>
                             <div className="construction__milestones">
@@ -177,7 +177,7 @@ export default function Home() {
                         <motion.div variants={fadeUp} className="welcome__image-block">
                             <img
                                 src="/images/photo de la communauté accueil.jpeg"
-                                alt="La communauté de la Paroisse Saint Augustin de Nnom Nam"
+                                alt="La communauté de la Paroisse Saint Augustin de NNOM-NNAM"
                                 className="welcome__image"
                             />
                         </motion.div>
@@ -187,7 +187,7 @@ export default function Home() {
                             <h2>Une Communauté de Foi en Marche</h2>
                             <div className="section-divider" style={{ margin: '16px 0 24px' }} />
                             <p>
-                                La Paroisse Saint Augustin de Nnom Nam est une jeune communauté
+                                La Paroisse Saint Augustin de NNOM-NNAM est une jeune communauté
                                 chrétienne dynamique et engagée. Bien que notre église soit encore
                                 en construction, notre foi est déjà solidement bâtie.
                             </p>
@@ -279,6 +279,41 @@ export default function Home() {
                             </Link>
                         </motion.div>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* ===== PILGRIMAGE BANNER ===== */}
+            <section className="pilgrimage-banner section">
+                <div className="container">
+                    <div className="pilgrimage-banner__card">
+                        <div className="pilgrimage-banner__bg">
+                            <img
+                                src="/images/mont des beatitudes  notre dame de beatitude.jpeg"
+                                alt="Notre Dame des Béatitudes"
+                            />
+                            <div className="pilgrimage-banner__overlay" />
+                        </div>
+                        <div className="pilgrimage-banner__content">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                <span className="pilgrimage-banner__badge">
+                                    <FaMountain /> Lieu de Pèlerinage
+                                </span>
+                                <h2>Notre Dame des Béatitudes</h2>
+                                <p>
+                                    Chaque premier samedi du mois, rejoignez la procession priante
+                                    jusqu'au sommet des collines. Un moment de grâce et de recueillement.
+                                </p>
+                                <Link to="/pelerinage" className="btn btn-gold">
+                                    Découvrir le pèlerinage <FaArrowRight />
+                                </Link>
+                            </motion.div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

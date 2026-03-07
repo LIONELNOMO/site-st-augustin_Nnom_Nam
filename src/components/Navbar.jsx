@@ -10,6 +10,7 @@ const navLinks = [
     { path: '/horaires', label: 'Horaires & Sacrements' },
     { path: '/evenements', label: 'Événements' },
     { path: '/dons', label: 'Dons' },
+    { path: '/pelerinage', label: 'Pèlerinage' },
     { path: '/contact', label: 'Contact' },
 ];
 
@@ -42,7 +43,7 @@ export default function Navbar() {
                     <FaChurch className="navbar__icon" />
                     <div className="navbar__brand-text">
                         <span className="navbar__title">Saint Augustin</span>
-                        <span className="navbar__location">Nnom Nam</span>
+                        <span className="navbar__location">NNOM-NNAM</span>
                     </div>
                 </Link>
 

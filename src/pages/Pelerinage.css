@@ -1,0 +1,354 @@
+/* ===== PÈLERINAGE HERO ===== */
+.pelerinage__hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.pelerinage__hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.pelerinage__hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.pelerinage__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(18, 8, 12, 0.92) 0%,
+            rgba(107, 39, 55, 0.55) 40%,
+            rgba(0, 0, 0, 0.2) 100%);
+}
+
+.pelerinage__hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 80px;
+    padding-top: 160px;
+}
+
+.pelerinage__hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-gold);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.pelerinage__hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-family: var(--font-heading);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.pelerinage__hero-sub {
+    display: block;
+    color: var(--color-gold);
+    font-size: 2.8rem;
+}
+
+.pelerinage__hero-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+/* ===== INFO CARDS ===== */
+.pelerinage__info {
+    background: var(--color-white);
+    margin-top: -40px;
+    position: relative;
+    z-index: 3;
+}
+
+.pelerinage__info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pelerinage__info-card {
+    text-align: center;
+    padding: 40px 28px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 32px rgba(107, 39, 55, 0.08);
+    border: 1px solid rgba(107, 39, 55, 0.06);
+    transition: all 0.4s ease;
+}
+
+.pelerinage__info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(107, 39, 55, 0.14);
+    border-color: rgba(196, 164, 105, 0.2);
+}
+
+.pelerinage__info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(107, 39, 55, 0.2);
+}
+
+.pelerinage__info-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+}
+
+.pelerinage__info-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.pelerinage__info-card strong {
+    color: var(--color-primary);
+}
+
+/* ===== PROGRAMME STEPS ===== */
+.pelerinage__programme {
+    background: var(--color-cream);
+    text-align: center;
+}
+
+.pelerinage__steps {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    text-align: left;
+}
+
+/* Vertical connector */
+.pelerinage__steps::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-gold));
+    z-index: 0;
+}
+
+.pelerinage__step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pelerinage__step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-cream);
+    border: 2px solid var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--color-gold-dark);
+    flex-shrink: 0;
+}
+
+.pelerinage__step-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), #8c3a50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(107, 39, 55, 0.2),
+        0 0 0 4px var(--color-cream),
+        0 0 0 6px rgba(107, 39, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pelerinage__step:hover .pelerinage__step-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(107, 39, 55, 0.25),
+        0 0 0 4px var(--color-cream),
+        0 0 0 6px rgba(196, 164, 105, 0.25);
+}
+
+.pelerinage__step-content {
+    flex: 1;
+    padding: 20px 24px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 16px rgba(107, 39, 55, 0.05);
+    border: 1px solid rgba(107, 39, 55, 0.05);
+    transition: all 0.3s ease;
+}
+
+.pelerinage__step:hover .pelerinage__step-content {
+    box-shadow: 0 8px 28px rgba(107, 39, 55, 0.1);
+    border-color: rgba(196, 164, 105, 0.15);
+}
+
+.pelerinage__step-content h3 {
+    font-size: 1.05rem;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+    font-family: var(--font-heading);
+}
+
+.pelerinage__step-content p {
+    font-size: 0.88rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.pelerinage__step-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-gold-dark);
+    background: linear-gradient(135deg, rgba(196, 164, 105, 0.12), rgba(107, 39, 55, 0.05));
+    padding: 4px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== CTA ===== */
+.pelerinage__cta {
+    background: linear-gradient(135deg, var(--color-primary), #4a1a25);
+    text-align: center;
+}
+
+.pelerinage__cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pelerinage__cta-icon {
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+}
+
+.pelerinage__cta h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 16px;
+    font-family: var(--font-heading);
+}
+
+.pelerinage__cta p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .pelerinage__hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .pelerinage__hero-sub {
+        font-size: 2rem;
+    }
+
+    .pelerinage__info-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pelerinage__info-card {
+        padding: 28px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pelerinage__hero {
+        min-height: 60vh;
+    }
+
+    .pelerinage__hero-content {
+        padding-bottom: 60px;
+        padding-top: 120px;
+    }
+
+    .pelerinage__hero h1 {
+        font-size: 2rem;
+    }
+
+    .pelerinage__hero-sub {
+        font-size: 1.6rem;
+    }
+
+    .pelerinage__hero-text {
+        font-size: 0.95rem;
+    }
+
+    .pelerinage__step-number {
+        display: none;
+    }
+
+    .pelerinage__steps::before {
+        left: 27px;
+    }
+
+    .pelerinage__step-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .pelerinage__step-content {
+        padding: 16px 18px;
+    }
+
+    .pelerinage__step-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .pelerinage__cta h2 {
+        font-size: 1.5rem;
+    }
+}

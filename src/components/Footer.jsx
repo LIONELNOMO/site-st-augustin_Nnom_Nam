@@ -22,7 +22,7 @@ export default function Footer() {
                                 <FaChurch className="footer__logo-icon" />
                                 <div>
                                     <h3>Paroisse Saint Augustin</h3>
-                                    <span>de Nnom Nam</span>
+                                    <span>de NNOM-NNAM</span>
                                 </div>
                             </div>
                             <p className="footer__desc">
@@ -44,6 +44,7 @@ export default function Footer() {
                                 <li><Link to="/a-propos">À Propos</Link></li>
                                 <li><Link to="/horaires">Horaires & Sacrements</Link></li>
                                 <li><Link to="/evenements">Événements</Link></li>
+                                <li><Link to="/pelerinage">Pèlerinage</Link></li>
                                 <li><Link to="/dons">Faire un don</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
@@ -57,21 +58,28 @@ export default function Footer() {
                                     <FaCross className="footer__schedule-icon" />
                                     <div>
                                         <strong>Dimanche</strong>
-                                        <span>08h00 - 10h00</span>
+                                        <span>8h15 · 9h30 · 11h30 · 17h00</span>
                                     </div>
                                 </li>
                                 <li>
                                     <FaCross className="footer__schedule-icon" />
                                     <div>
-                                        <strong>Mercredi</strong>
-                                        <span>18h00 - 19h00</span>
+                                        <strong>Samedi</strong>
+                                        <span>Messe Matin / Soir</span>
                                     </div>
                                 </li>
                                 <li>
                                     <FaCross className="footer__schedule-icon" />
                                     <div>
-                                        <strong>Vendredi</strong>
-                                        <span>18h00 - 19h00</span>
+                                        <strong>Lundi</strong>
+                                        <span>17h30 — Oratoire</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <FaCross className="footer__schedule-icon" />
+                                    <div>
+                                        <strong>Jeudi</strong>
+                                        <span>Adoration 7h - 17h30</span>
                                     </div>
                                 </li>
                             </ul>
@@ -83,15 +91,15 @@ export default function Footer() {
                             <ul className="footer__contact">
                                 <li>
                                     <FaMapMarkerAlt />
-                                    <span>Nnom Nam, Cameroun</span>
+                                    <span>NNOM-NNAM, Cameroun</span>
                                 </li>
                                 <li>
                                     <FaPhone />
-                                    <span>+237 6XX XXX XXX</span>
+                                    <span>+237 699 99 51 37</span>
                                 </li>
                                 <li>
                                     <FaEnvelope />
-                                    <span>paroisse.staugustin@email.com</span>
+                                    <span>saintaugustinnnomnnam@yahoo.fr</span>
                                 </li>
                             </ul>
                         </div>
@@ -101,7 +109,7 @@ export default function Footer() {
 
             <div className="footer__bottom">
                 <div className="container">
-                    <p>&copy; {currentYear} Paroisse Saint Augustin de Nnom Nam. Tous droits réservés.</p>
+                    <p>&copy; {currentYear} Paroisse Saint Augustin de NNOM-NNAM. Tous droits réservés.</p>
                     <p className="footer__credit">Conçu avec ❤️ et foi</p>
                 </div>
             </div>
