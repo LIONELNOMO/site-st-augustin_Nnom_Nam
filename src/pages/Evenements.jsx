@@ -117,7 +117,7 @@ const priereCommunautaire = [
     { title: 'Chorale Ste Monique', schedule: 'Mardi à 17h00', chaplin: 'Ab. Simon NDJEWELL', icon: <FaMusic /> },
     { title: 'Chorale les Petits Amis de St Augustin', schedule: 'Mercredi et Samedi à 16h00', chaplin: 'Ab. Simon NDJEWELL', icon: <FaMusic /> },
     { title: 'Chorale Sacré-Cœur de Jésus', schedule: 'Mardi et Samedi à 17h00', chaplin: 'Ab. Simon NDJEWELL', icon: <FaMusic /> },
-    { title: 'Chorale St Vincent de Paul', schedule: 'Mardi et Mercredi à 17h00', chaplin: 'À définir', icon: <FaMusic /> },
+    { title: 'Chorale St Vincent de Paul', schedule: 'Mardi et Mercredi à 17h00', chaplin: 'Ab. Simon NDJEWELL', icon: <FaMusic /> },
 ];
 
 export default function Evenements() {

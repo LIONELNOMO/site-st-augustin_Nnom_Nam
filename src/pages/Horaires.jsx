@@ -23,7 +23,7 @@ const massSchedule = [
         highlight: true
     },
     { day: 'Lundi', times: ['17h30 — Messe à l\'Oratoire'] },
-    { day: 'Samedi', times: ['Messe Matin / Soir'] },
+    { day: 'Samedi', times: ['Matin 06h / Soir 18h'] },
     { day: 'Jeudi', times: ['07h00 à 17h30 — Adoration à l\'Oratoire'] },
     { day: 'Tous les jours', times: ['Confessions tous les matins'] },
 ];
@@ -57,7 +57,7 @@ const sacraments = [
         icon: <FaPrayingHands />,
         title: 'Confession',
         desc: 'Le sacrement de la réconciliation est disponible pour tous ceux qui souhaitent se rapprocher de Dieu.',
-        requirements: ['Samedi de 16h00 à 17h00', 'Sur rendez-vous avec le curé', 'Lors des temps de préparation (Avent, Carême)']
+        requirements: []
     },
 ];
 
@@ -151,14 +151,16 @@ export default function Horaires() {
                                         <h3>{sac.title}</h3>
                                     </div>
                                     <p className="horaires__sacrament-desc">{sac.desc}</p>
-                                    <div className="horaires__sacrament-reqs">
-                                        <h4>Conditions & démarches :</h4>
-                                        <ul>
-                                            {sac.requirements.map((req, j) => (
-                                                <li key={j}>{req}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                                    {sac.requirements && sac.requirements.length > 0 && (
+                                        <div className="horaires__sacrament-reqs">
+                                            <h4>Conditions & démarches :</h4>
+                                            <ul>
+                                                {sac.requirements.map((req, j) => (
+                                                    <li key={j}>{req}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </motion.div>
                             ))}
                         </div>

@@ -142,6 +142,10 @@ export default function Home() {
                                 </div>
                                 <div className="construction__milestone construction__milestone--active">
                                     <div className="construction__milestone-dot" />
+                                    <span>Charpente</span>
+                                </div>
+                                <div className="construction__milestone">
+                                    <div className="construction__milestone-dot" />
                                     <span>Toiture</span>
                                 </div>
                                 <div className="construction__milestone">

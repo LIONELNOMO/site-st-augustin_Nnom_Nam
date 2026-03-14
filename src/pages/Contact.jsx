@@ -84,14 +84,14 @@ export default function Contact() {
                                     <div className="contact__info-icon"><FaEnvelope /></div>
                                     <div>
                                         <span className="contact__info-label">Email</span>
-                                        <span className="contact__info-value">saintaugustinnnomnnam@yahoo.fr</span>
+                                        <span className="contact__info-value">etienneetoundi@gmail.com</span>
                                     </div>
                                 </div>
                                 <div className="contact__info-item">
                                     <div className="contact__info-icon"><FaClock /></div>
                                     <div>
                                         <span className="contact__info-label">Secrétariat</span>
-                                        <span className="contact__info-value">Lun - Ven : 8h - 16h</span>
+                                        <span className="contact__info-value">Du Mardi au Dimanche<br />de 8h00 à 13h00</span>
                                     </div>
                                 </div>
                             </div>

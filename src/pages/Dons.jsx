@@ -19,7 +19,7 @@ const donationMethods = [
         desc: 'Envoyez votre don par Orange Money ou MTN Mobile Money',
         details: [
             'Orange Money : +237 699 99 51 37',
-            'Nom : Paroisse Saint Augustin'
+            'Nom : Etienne ETOUNDI ESSAMA'
         ]
     },
     {
@@ -36,8 +36,7 @@ const donationMethods = [
 
 const donationPurposes = [
     { icon: <FaChurch />, title: 'Construction de l\'église', desc: 'Contribuez à l\'édification de notre lieu de culte', progress: 50 },
-    { icon: <FaPrayingHands />, title: 'Vie pastorale', desc: 'Soutenez les activités liturgiques et pastorales', progress: 60 },
-    { icon: <FaHandHoldingHeart />, title: 'Œuvres de charité', desc: 'Aidez les plus démunis de notre communauté', progress: 45 },
+    { icon: <FaHandHoldingHeart />, title: 'Œuvres de charité', desc: 'Aidez les plus démunis de notre communauté' },
 ];
 
 const charityWorks = [
@@ -140,12 +139,14 @@ export default function Dons() {
                                     <div className="dons__purpose-icon">{item.icon}</div>
                                     <h3>{item.title}</h3>
                                     <p>{item.desc}</p>
-                                    <div className="dons__purpose-progress">
-                                        <div className="dons__purpose-bar">
-                                            <div className="dons__purpose-fill" style={{ width: `${item.progress}%` }} />
+                                    {item.progress && (
+                                        <div className="dons__purpose-progress">
+                                            <div className="dons__purpose-bar">
+                                                <div className="dons__purpose-fill" style={{ width: `${item.progress}%` }} />
+                                            </div>
+                                            <span>{item.progress}% financé</span>
                                         </div>
-                                        <span>{item.progress}% financé</span>
-                                    </div>
+                                    )}
                                 </div>
                             ))}
                         </motion.div>
@@ -295,7 +296,6 @@ export default function Dons() {
                                             onChange={handleChange}
                                         >
                                             <option value="construction">Construction de l'église</option>
-                                            <option value="pastoral">Vie pastorale</option>
                                             <option value="charité">Œuvres de charité</option>
                                             <option value="autre">Autre</option>
                                         </select>

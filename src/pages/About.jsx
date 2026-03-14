@@ -30,7 +30,7 @@ const timeline = [
 
 const parishStats = [
     { icon: <FaUsers />, value: '1 600', label: 'Fidèles', suffix: 'environ' },
-    { icon: <FaCross />, value: '2', label: 'Prêtres', suffix: 'Curé & Vicaire' },
+    { icon: <FaCross />, value: '3', label: 'Prêtres', suffix: 'Curé & Vicaires' },
     { icon: <FaLayerGroup />, value: '40', label: 'Groupes Paroissiaux', suffix: '3 plateformes' },
     { icon: <FaMapMarkerAlt />, value: '14', label: 'CEV', suffix: 'communautés' },
     { icon: <FaBookReader />, value: '15', label: 'Catéchistes', suffix: '10 femmes, 5 hommes' },
@@ -65,7 +65,7 @@ const parishServices = [
 const pastoralTeam = [
     {
         name: 'Abbé Sébastien MANGA',
-        role: 'Vicaire',
+        role: 'Vicaire 1',
         icon: FaPrayingHands,
         quote: '« Servir cette communauté est une grâce. Chaque jour, je vois la foi grandir dans les cœurs. »',
         bio: 'Collaborateur dévoué du curé, il assure l\'animation pastorale, la célébration des sacrements et l\'accompagnement spirituel des fidèles.',
@@ -73,7 +73,7 @@ const pastoralTeam = [
     },
     {
         name: 'Abbé Simon NDJEWELL',
-        role: 'Prêtre',
+        role: 'Vicaire 2',
         icon: FaCross,
         quote: '« Former les jeunes dans la foi, c\'est planter des graines d\'espérance pour demain. »',
         bio: 'Prêtre au service de la paroisse Saint Augustin, il contribue à la vie spirituelle de la communauté et à l\'accompagnement des fidèles dans leur cheminement de foi.',

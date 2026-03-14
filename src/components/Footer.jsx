@@ -99,7 +99,7 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <FaEnvelope />
-                                    <span>saintaugustinnnomnnam@yahoo.fr</span>
+                                    <span>etienneetoundi@gmail.com</span>
                                 </li>
                             </ul>
 

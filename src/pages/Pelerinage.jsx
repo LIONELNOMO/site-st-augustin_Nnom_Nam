@@ -22,7 +22,7 @@ const programme = [
     {
         icon: <FaMountain />,
         title: 'Procession priante',
-        desc: 'Montée priante en communauté jusqu\'au sommet des collines.',
+        desc: 'montéé en communauté jusqu\'au sommet des collines.',
         time: null
     },
     {
