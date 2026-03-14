@@ -102,6 +102,11 @@ export default function Footer() {
                                     <span>saintaugustinnnomnnam@yahoo.fr</span>
                                 </li>
                             </ul>
+
+                            <h4 style={{ marginTop: '20px', marginBottom: '8px' }}>Secrétariat</h4>
+                            <p style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.8)', lineHeight: '1.4' }}>
+                                Ouvert du Mardi au Dimanche<br />de 8h00 à 13h00
+                            </p>
                         </div>
                     </div>
                 </div>

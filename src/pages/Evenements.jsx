@@ -76,6 +76,30 @@ const events = [
         category: 'Collecte',
         icon: <FaHandHoldingHeart />
     },
+    {
+        date: 'Fête-Dieu',
+        title: 'Fête-Dieu (Corpus Christi)',
+        desc: 'Messe communautaire, suivie d\'une grande procession eucharistique et de la première communion des jeunes.',
+        location: 'Paroisse St Augustin',
+        category: 'Fête',
+        icon: <FaChurch />
+    },
+    {
+        date: '15 Août 2026',
+        title: 'Assomption — Fête patronale de l\'EKOAN MARIA',
+        desc: 'Célébration solennelle de l\'Assomption de la Vierge Marie, fête patronale du groupe EKOAN MARIA.',
+        location: 'Paroisse St Augustin',
+        category: 'Fête',
+        icon: <FaPrayingHands />
+    },
+    {
+        date: '29 Août 2026',
+        title: 'Fête Patronale de la Paroisse',
+        desc: 'Grande célébration de la fête de Saint Augustin, saint patron de notre paroisse, avec tous les fidèles.',
+        location: 'Paroisse St Augustin',
+        category: 'Fête',
+        icon: <FaChurch />
+    },
 ];
 
 const priereCommunautaire = [

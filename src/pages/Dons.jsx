@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaHandHoldingHeart, FaChurch, FaPhone, FaMoneyBillWave, FaMobileAlt, FaUniversity, FaPrayingHands, FaHardHat, FaCheckCircle } from 'react-icons/fa';
+import { FaHandHoldingHeart, FaChurch, FaPhone, FaMoneyBillWave, FaMobileAlt, FaUniversity, FaPrayingHands, FaHardHat, FaCheckCircle, FaHandsHelping, FaHeartbeat, FaUtensils, FaChild } from 'react-icons/fa';
 import './Dons.css';
 
 const fadeUp = {
@@ -38,6 +38,29 @@ const donationPurposes = [
     { icon: <FaChurch />, title: 'Construction de l\'église', desc: 'Contribuez à l\'édification de notre lieu de culte', progress: 50 },
     { icon: <FaPrayingHands />, title: 'Vie pastorale', desc: 'Soutenez les activités liturgiques et pastorales', progress: 60 },
     { icon: <FaHandHoldingHeart />, title: 'Œuvres de charité', desc: 'Aidez les plus démunis de notre communauté', progress: 45 },
+];
+
+const charityWorks = [
+    {
+        icon: <FaHandsHelping />,
+        title: 'Groupe Caritas',
+        desc: 'Supervisé par le Curé, le groupe coordonne les actions de solidarité de la paroisse pour apporter soutien et réconfort aux plus vulnérables.'
+    },
+    {
+        icon: <FaHeartbeat />,
+        title: 'Sœurs de Saint Joseph',
+        desc: 'Elles se consacrent avec dévouement à la visite des malades à domicile, apportant un précieux réconfort spirituel et moral à nos frères souffrants.'
+    },
+    {
+        icon: <FaUtensils />,
+        title: 'Cantines pour les Déshérités',
+        desc: 'Des repas chauds et nutritifs sont régulièrement servis aux personnes démunies de notre communauté grâce à vos dons et à l\'action de nos bénévoles.'
+    },
+    {
+        icon: <FaChild />,
+        title: 'Filles de la Charité',
+        desc: 'Elles œuvrent activement pour l\'éducation des plus jeunes, le soutien aux orphelins et l\'assistance directe aux familles les plus démunies.'
+    }
 ];
 
 export default function Dons() {
@@ -122,6 +145,38 @@ export default function Dons() {
                                             <div className="dons__purpose-fill" style={{ width: `${item.progress}%` }} />
                                         </div>
                                         <span>{item.progress}% financé</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Charity Works */}
+            <section className="dons__charity section">
+                <div className="container">
+                    <motion.div
+                        variants={stagger}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <motion.div variants={fadeUp}>
+                            <h2 className="section-title">Nos Œuvres de Charité</h2>
+                            <div className="section-divider" />
+                            <p className="section-subtitle">
+                                Vos dons financent directement nos actions de solidarité sur le terrain auprès des personnes vulnérables de notre communauté.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="dons__charity-grid">
+                            {charityWorks.map((work, i) => (
+                                <div key={i} className="dons__charity-card">
+                                    <div className="dons__charity-icon">{work.icon}</div>
+                                    <div className="dons__charity-text">
+                                        <h3>{work.title}</h3>
+                                        <p>{work.desc}</p>
                                     </div>
                                 </div>
                             ))}

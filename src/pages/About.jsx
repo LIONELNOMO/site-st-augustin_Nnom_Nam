@@ -69,7 +69,7 @@ const pastoralTeam = [
         icon: FaPrayingHands,
         quote: '« Servir cette communauté est une grâce. Chaque jour, je vois la foi grandir dans les cœurs. »',
         bio: 'Collaborateur dévoué du curé, il assure l\'animation pastorale, la célébration des sacrements et l\'accompagnement spirituel des fidèles.',
-        photo: '/images/vicaire ABBE SEBASTIEN MANGA .jpeg'
+        photo: '/images/abbé simon NDJEWELL.jpeg'
     },
     {
         name: 'Abbé Simon NDJEWELL',
@@ -77,7 +77,7 @@ const pastoralTeam = [
         icon: FaCross,
         quote: '« Former les jeunes dans la foi, c\'est planter des graines d\'espérance pour demain. »',
         bio: 'Prêtre au service de la paroisse Saint Augustin, il contribue à la vie spirituelle de la communauté et à l\'accompagnement des fidèles dans leur cheminement de foi.',
-        photo: '/images/abbé simon NDJEWELL.jpeg'
+        photo: '/images/vicaire ABBE SEBASTIEN MANGA .jpeg'
     },
 ];
 
@@ -144,6 +144,31 @@ export default function About() {
                                 se construit pierre après pierre, notre communauté de foi est déjà vivante et
                                 vibrante. Nous célébrons les offices dans un espace provisoire en attendant
                                 l'achèvement de notre église.
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Opération Charpente VIP Callout */}
+            <section className="about__charpente-notice section" style={{ padding: '0 0 40px' }}>
+                <div className="container">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="about__charpente-card"
+                    >
+                        <div className="about__charpente-content">
+                            <span className="about__charpente-badge" style={{ display: 'inline-block', backgroundColor: '#e74c3c', color: 'white', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>
+                                En Cours
+                            </span>
+                            <h2 style={{ fontSize: '2rem', color: '#6B2737', marginBottom: '10px' }}>
+                                Actuellement : <span style={{ color: '#D4A853' }}>Opération Charpente</span>
+                            </h2>
+                            <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem', maxWidth: '600px', margin: '0 auto' }}>
+                                Nous avons franchi une étape décisive ! Soutenez notre projet en participant à la levée des fonds pour la toiture de notre future église.
                             </p>
                         </div>
                     </motion.div>
