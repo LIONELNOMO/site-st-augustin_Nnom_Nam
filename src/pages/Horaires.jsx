@@ -15,6 +15,7 @@ const massSchedule = [
     {
         day: 'Dimanche',
         times: [
+            '06h00',
             '08h15 — Messe animée par Andrew Choir',
             '09h30 — Chorale Ste Monique et Ste Vincent de Paul',
             '11h30 — Messe des Jeunes, chorale les Petits Amis de St Augustin',
@@ -22,8 +23,9 @@ const massSchedule = [
         ],
         highlight: true
     },
-    { day: 'Lundi', times: ['17h30 — Messe à l\'Oratoire'] },
-    { day: 'Samedi', times: ['Matin 06h / Soir 18h'] },
+    { day: 'De lundi à vendredi', times: ['17h30 (messe du soir)'] },
+    { day: 'De mardi à samedi', times: ['06h00 (messe matinale)'] },
+    { day: 'Samedi', times: ['18h00 (messe du soir)'] },
     { day: 'Jeudi', times: ['07h00 à 17h30 — Adoration à l\'Oratoire'] },
     { day: 'Tous les jours', times: ['Confessions tous les matins'] },
 ];
