@@ -16,17 +16,17 @@ const massSchedule = [
         day: 'Dimanche',
         times: [
             '06h00 — Messe en Ewondo animée par la chorale Sacré-Cœur de Jésus',
-            '08h15 — Messe animée par Andrew Choir',
-            '09h30 — Chorale Ste Monique et Ste Vincent de Paul',
-            '11h30 — Messe des Jeunes, chorale les Petits Amis de St Augustin',
-            '17h00 — Chorale Ste Cécile'
+            '08h15 — Messe en Anglais avec Saint Andrew Choir',
+            '09h30 — Messe en Français avec chorales Sainte Monique et Saint Vincent de Paul',
+            '11h30 — Messe en Français avec chorale Les amis de Saint Augustin',
+            '17h00 — Messe en Français avec chorale Sainte Cécile'
         ],
         highlight: true
     },
     { day: 'De lundi à vendredi', times: ['17h30 (messe du soir)'] },
     { day: 'De mardi à samedi', times: ['06h00 (messe matinale)'] },
     { day: 'Samedi', times: ['18h00 — Messe prédominicale'] },
-    { day: 'Jeudi', times: ['07h00 à 17h30 — Adoration à l\'Oratoire'] },
+    { day: 'Jeudi', times: ['07h00 à 17h30 — Adoration eucharistique à l\'Oratoire'] },
     { day: 'Tous les jours', times: ['Confessions tous les matins'] },
 ];
 
